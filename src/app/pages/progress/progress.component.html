@@ -1,1 +1,48 @@
-<p>progress works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Barra de Progeso...</h5>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-suce" role="progressbar" [attr.ariaValuennow]="porcentaje" aria-valuemin="0" aria-valuemax="100" [style.width]="porcentaje + '%'"></div>
+                </div>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValuennow]="porcentaje1" aria-valuemin="0" aria-valuemax="100" [style.width]="porcentaje1 + '%'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    tarjeta 3
+                </div>
+            </div>
+        </div> -->
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <!-- 
+                    Nombre es una Alias definido en el componente de incrementador, el nombre real es titulo y sin embargo se hace referencia desde afuera
+                    a la varibales como Nombre
+                 -->
+                <!-- por funcion -->
+                <!-- <app-incrementador Nombre="Progress azul" [porcentaje]="porcentaje" (cambiaValor)="actualizarProgreso($event)"></app-incrementador> -->
+                <!-- directo al valor -->
+                <app-incrementador Nombre="Progress azul" [porcentaje]="porcentaje" (cambiaValor)="porcentaje = $event"></app-incrementador>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementador Nombre="Progress verde" [porcentaje]="porcentaje1" (cambiaValor)="porcentaje1 = $event"></app-incrementador>
+            </div>
+        </div>
+    </div>
+</div>
