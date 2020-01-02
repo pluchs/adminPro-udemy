@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { ChartsModule } from 'ng2-charts';
 import { GraficaDetalleComponent } from '../components/grafica-detalle/grafica-detalle.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { GraficaDetalleComponent } from '../components/grafica-detalle/grafica-d
     ProgressComponent,
     PagesComponent,
     IncrementadorComponent,
-    GraficaDetalleComponent
+    GraficaDetalleComponent,
+    AccountSettingsComponent
   ],
   imports: [
       CommonModule,

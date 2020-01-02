@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SettingsService, SidebarService, SharedService } from './services/service.index';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'adminPro';
+  constructor( public _ajustesServices: SettingsService ){
+    this._ajustesServices.cargarAjustes();
+  }
 }
